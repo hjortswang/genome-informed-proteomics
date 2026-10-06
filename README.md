@@ -16,24 +16,36 @@ Install the required Python dependencies:
 pip install -r requirements.txt
 ```
 
+
 ### CD-HIT
 
 [CD-HIT](https://github.com/weizhongli/cdhit) is required for protein sequence clustering and must be installed separately.
 
-**macOS (Homebrew):**
+On macOS, CD-HIT can be compiled from source without OpenMP:
 
 ```bash
-brew install cd-hit
+git clone https://github.com/weizhongli/cdhit.git
+cd cdhit
+make openmp=no
 ```
 
-**Ubuntu/Debian:**
+Verify the installation:
 
 ```bash
-sudo apt install cd-hit
+./cd-hit -h
 ```
 
-Verify that CD-HIT is installed and available on your PATH:
+To make `cd-hit` available from the command line and to the Python pipeline:
 
 ```bash
+sudo cp cd-hit /usr/local/bin/
+```
+
+Verify that the executable is available on your PATH:
+
+```bash
+which cd-hit
 cd-hit -h
 ```
+
+CD-HIT must be available on the system PATH before running the clustering pipeline.
