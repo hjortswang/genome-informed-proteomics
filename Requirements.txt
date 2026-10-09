@@ -1,0 +1,12 @@
+numpy
+pandas
+seaborn
+matplotlib
+plotly
+cdhit-reader
+scipy
+Bio
+biocommons
+setuptools==81.0.0
+ast
+nbformat>=4.2.0
