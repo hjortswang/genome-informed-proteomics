@@ -13,7 +13,7 @@ cd genome-informed-proteomics
 Install the required Python dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip install -r Requirements.txt
 ```
 
 
